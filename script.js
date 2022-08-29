@@ -38,7 +38,7 @@ function generatePassword(){
     while(confirmUpperCase === false && confirmLowerCase === false && confirmSpecialCharacter === false ||
     confirmNumericCharacter== false){
     alert("You must choose at least one option");
-    break;
+    Exit();
   }
     //Assign and action to the password parametersneed to fix this
     var passwordCharacters =[];
