@@ -24,23 +24,23 @@ function generatePassword(){
   
   while(confirmLength<=7 || confirmLength>=129){
     alert("Password length must be 8 to 128 characters Try again!");
-    return;
-    
+    return confirmLength;
   }
   //repeat back how many characters user will have
   alert(`Your password will have ${confirmLength} characters`);
+  
     //determine parameters of password
     var confirmSpecialCharacter = confirm("Click OK to confirm if you would like to include special characters");
     var confirmNumericCharacter = confirm("Click OK to confirm if you would like to include numeric characters");
     var confirmLowerCase = confirm("Click OK to confirm if you would like to include lowercase characters");
     var confirmUpperCase = confirm("Click OK to confirm if you would like to include uppercase characters");
   
-    while(confirmUpperCase === false && confirmLowerCase === false && confirmSpecialCharacter === false ||
+    while(confirmUppercase === false && confirmLowercase === false && confirmSpecialCharacter === false ||
     confirmNumericCharacter== false){
     alert("You must choose at least one option");
     Exit();
   }
-    //Assign and action to the password parametersneed to fix this
+    //Assign and action to the password parameters need to fix this
     var passwordCharacters =[];
 
     if(confirmSpecialCharacter){
@@ -65,6 +65,7 @@ function generatePassword(){
     return randomPassword;
     
   }
+  
     
  
 
