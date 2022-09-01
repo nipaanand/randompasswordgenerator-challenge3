@@ -26,7 +26,7 @@ function generatePassword(){
     
   
     alert("Password length must be 8 to 128 characters Try again!");
-    
+    return;
   }
   //repeat back how many characters user will have
   alert(`Your password will have ${confirmLength} characters`);
@@ -40,7 +40,7 @@ function generatePassword(){
     while(confirmUppercase === false && confirmLowercase === false && confirmSpecialCharacter === false ||
     confirmNumericCharacter== false){
     alert("You must choose at least one option");
-    Exit();
+    exit();
   }
     //Assign and action to the password parameters need to fix this
     var passwordCharacters =[];
@@ -85,4 +85,5 @@ function writePassword() {
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword());
+
 //console.log(generateBtn);
